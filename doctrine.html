@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ayo Traditions — The Doctrine</title>
+<meta name="description" content="The founding text of Ayo Traditions: the living memory of Fà, the wisdom of Vodoun, and the path of remembrance.">
+<link rel="canonical" href="https://ayotraditions.com/doctrine.html">
+
+<!-- Open Graph -->
+<meta property="og:type"        content="article">
+<meta property="og:url"         content="https://ayotraditions.com/doctrine.html">
+<meta property="og:title"       content="Ayo Traditions — The Doctrine">
+<meta property="og:description" content="The founding text of Ayo Traditions: the living memory of Fà, the wisdom of Vodoun, and the path of remembrance.">
+<meta property="og:image"       content="https://ayotraditions.com/images/doctrine-ayo.jpg">
+<meta property="og:locale"      content="fr_FR">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+      media="print" onload="this.media='all'">
+<noscript>
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap">
+</noscript>
+
+<style>
+/* ── RESET & BASE (identique au site principal) ───────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --or:       #C9940A;
+  --or-pale:  #dba832;
+  --terre:    #3D2B1F;
+  --parche:   #E5E1D3;
+  --nuit:     #0F0F0F;
+  --surface:  #181310;
+  --surface2: #221A12;
+  --creme:    #F9F7F2;
+  --texte:    #D1C7B7;
+  --muted:    #9C8E77;
+  --nav-h:    80px;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); }
+body {
+  background: var(--nuit); color: var(--texte);
+  font-family: 'Inter', sans-serif; font-weight: 300;
+  font-size: 16px; line-height: 1.8; overflow-x: hidden;
+}
+::selection  { background: var(--or); color: var(--nuit); }
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--nuit); }
+::-webkit-scrollbar-thumb { background: var(--or); }
+
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 9999; opacity: 0.5;
+}
+
+/* ── LOGO (identique) ─────────────────────────────────── */
+@keyframes breathe {
+  0%   { border-radius: 48% 52% 55% 45% / 46% 54% 46% 54%; transform: rotate(0deg)   scale(1);    }
+  12%  { border-radius: 52% 48% 46% 54% / 54% 46% 56% 44%; transform: rotate(45deg)  scale(1.03); }
+  25%  { border-radius: 44% 56% 52% 48% / 48% 52% 44% 56%; transform: rotate(90deg)  scale(0.97); }
+  37%  { border-radius: 56% 44% 48% 52% / 52% 48% 58% 42%; transform: rotate(135deg) scale(1.04); }
+  50%  { border-radius: 46% 54% 56% 44% / 44% 56% 48% 52%; transform: rotate(180deg) scale(0.98); }
+  62%  { border-radius: 54% 46% 44% 56% / 56% 44% 52% 48%; transform: rotate(225deg) scale(1.03); }
+  75%  { border-radius: 42% 58% 50% 50% / 50% 50% 42% 58%; transform: rotate(270deg) scale(0.96); }
+  87%  { border-radius: 50% 50% 54% 46% / 46% 54% 50% 50%; transform: rotate(315deg) scale(1.02); }
+  100% { border-radius: 48% 52% 55% 45% / 46% 54% 46% 54%; transform: rotate(360deg) scale(1);    }
+}
+@keyframes breathe-slow {
+  0%   { border-radius: 48% 52% 55% 45% / 46% 54% 46% 54%; transform: rotate(0deg)   scale(1);    }
+  25%  { border-radius: 52% 48% 46% 54% / 54% 46% 56% 44%; transform: rotate(90deg)  scale(1.04); }
+  50%  { border-radius: 44% 56% 52% 48% / 48% 52% 44% 56%; transform: rotate(180deg) scale(0.97); }
+  75%  { border-radius: 56% 44% 48% 52% / 52% 48% 58% 42%; transform: rotate(270deg) scale(1.03); }
+  100% { border-radius: 48% 52% 55% 45% / 46% 54% 46% 54%; transform: rotate(360deg) scale(1);    }
+}
+.logo-mark { position: relative; display: flex; align-items: center; justify-content: center; }
+.logo-outer { position: absolute; border: 1.5px solid currentColor; border-radius: 48% 52% 55% 45% / 46% 54% 46% 54%; animation: breathe 14s ease-in-out infinite; }
+.lm-md .logo-outer, .lm-sm .logo-outer { animation: breathe-slow 20s ease-in-out infinite; }
+.lm-lg .logo-outer { animation: breathe 18s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .logo-outer { animation: none; } }
+.logo-inner { position: absolute; border: 1px solid currentColor; border-radius: 50%; opacity: 0.65; }
+.lm-xl { width: 110px; height: 110px; }
+.lm-xl .logo-outer { width: 100px; height: 100px; }
+.lm-xl .logo-inner { width:  52px; height:  52px; }
+.lm-lg { width: 56px; height: 56px; }
+.lm-lg .logo-outer { width:  50px; height:  50px; }
+.lm-lg .logo-inner { width:  26px; height:  26px; }
+.lm-md { width: 36px; height: 36px; }
+.lm-md .logo-outer { width:  32px; height:  32px; }
+.lm-md .logo-inner { width:  16px; height:  16px; }
+.lm-sm { width: 24px; height: 24px; }
+.lm-sm .logo-outer { width:  22px; height:  22px; }
+.lm-sm .logo-inner { width:  11px; height:  11px; }
+
+h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 300; }
+
+/* ── NAVIGATION (identique) ───────────────────────────── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h);
+  z-index: 10000; padding: 0 2.5rem;
+  display: flex; justify-content: space-between; align-items: center;
+  transition: background 0.5s ease;
+}
+nav.scrolled {
+  background: rgba(15,10,8,0.96); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(201,148,10,0.12);
+}
+.nav-logo { display: flex; align-items: center; gap: 0.9rem; text-decoration: none; outline-offset: 4px; }
+.nav-wordmark {
+  font-family: 'Montserrat', sans-serif; font-weight: 300;
+  font-size: 1.15rem; letter-spacing: 0.28em; color: var(--or); text-transform: uppercase;
+}
+.nav-links { display: flex; gap: 0.5rem; list-style: none; }
+.nav-links a {
+  text-decoration: none; color: var(--muted);
+  font-family: 'Montserrat', sans-serif; font-size: 0.65rem;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  transition: color 0.3s; padding: 0.8rem 0.6rem;
+  display: flex; align-items: center; min-height: 44px;
+}
+.nav-links a:hover, .nav-links a:focus { color: var(--or); outline: none; }
+
+.menu-toggle { display: none; flex-direction: column; justify-content: center; cursor: pointer; padding: 0.8rem; gap: 0; -webkit-tap-highlight-color: transparent; border: none; background: transparent; min-width: 44px; min-height: 44px; }
+.menu-toggle span { width: 24px; height: 2px; background: var(--or); margin: 3px 0; transition: transform 0.3s ease, opacity 0.3s ease; transform-origin: center; display: block; }
+
+/* ── HERO SPÉCIFIQUE À LA PAGE DOCTRINE ──────────────── */
+.doctrine-hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  margin-top: var(--nav-h);
+}
+.doctrine-hero-bg {
+  position: absolute; inset: 0;
+  background-image: url('images/doctrine-ayo.jpg');
+  background-size: cover;
+  background-position: center 30%;
+  opacity: 0.3;
+  filter: grayscale(0.5);
+  mix-blend-mode: luminosity;
+}
+.doctrine-hero-overlay {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at center, transparent 30%, var(--nuit) 90%);
+}
+.doctrine-hero-content {
+  position: relative; z-index: 2;
+  max-width: 860px;
+  padding: 4rem 2rem;
+}
+.doctrine-hero-content h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 100;
+  letter-spacing: 0.3em;
+  color: var(--creme);
+  line-height: 1.2;
+  text-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
+.doctrine-hero-content .subhead {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--or);
+  margin-top: 1rem;
+  letter-spacing: 0.1em;
+}
+
+/* ── LAYOUT SPÉCIFIQUE PAGES ─────────────────────────── */
+.page-content {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 3rem 2rem 6rem;
+}
+
+/* Mise en valeur des termes importants */
+.highlight {
+  color: var(--creme);
+  font-weight: 400;
+  border-bottom: 1px dashed var(--or);
+  padding-bottom: 2px;
+}
+.term {
+  color: var(--or);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 200;
+  letter-spacing: 0.05em;
+  color: var(--creme);
+  margin: 3rem 0 1.5rem;
+  border-left: 3px solid var(--or);
+  padding-left: 1.5rem;
+}
+.section-title:first-of-type { margin-top: 0; }
+
+/* Blocs de texte poétiques */
+blockquote {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--parche);
+  border-left: 2px solid var(--or);
+  padding: 1rem 0 1rem 2rem;
+  margin: 2.5rem 0;
+  line-height: 1.75;
+  background: linear-gradient(to right, rgba(201,148,10,0.05), transparent);
+}
+.verse {
+  font-style: italic;
+  color: var(--muted);
+  text-align: center;
+  margin: 2rem 0;
+  letter-spacing: 0.05em;
+}
+
+/* Grille pour les lois */
+.living-law {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+.law-item {
+  background: var(--surface);
+  padding: 1.8rem;
+  border: 1px solid rgba(201,148,10,0.15);
+  transition: transform 0.3s, border-color 0.3s;
+}
+.law-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(201,148,10,0.4);
+}
+.law-item h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: var(--or);
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.1em;
+}
+.law-item p { font-size: 0.9rem; color: var(--muted); }
+
+/* Listes d'engagement */
+.covenant-list, .commitment-list {
+  list-style: none;
+  columns: 2;
+  column-gap: 2rem;
+  margin: 2rem 0;
+}
+.covenant-list li, .commitment-list li {
+  font-size: 0.95rem;
+  padding: 0.3rem 0;
+  break-inside: avoid;
+  position: relative;
+  padding-left: 1.8rem;
+}
+.covenant-list li::before, .commitment-list li::before {
+  content: '◆';
+  position: absolute; left: 0;
+  color: var(--or);
+  font-size: 0.7rem;
+}
+
+/* Glossaire */
+.glossary-term {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  color: var(--or);
+  margin: 1.8rem 0 0.2rem;
+  letter-spacing: 0.1em;
+}
+.glossary-def {
+  margin-bottom: 1.5rem;
+  font-size: 0.98rem;
+  line-height: 1.9;
+}
+
+/* Invocation */
+.invocation {
+  text-align: center;
+  background: linear-gradient(145deg, var(--surface), #1f1a12);
+  padding: 3rem;
+  border: 1px solid var(--or);
+  margin: 3rem 0;
+  font-size: 1.1rem;
+  line-height: 2;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+.invocation p { margin-bottom: 1rem; }
+
+/* ── FOOTER (identique) ───────────────────────────────── */
+footer {
+  background: var(--surface);
+  border-top: 1px solid rgba(201,148,10,0.1);
+  padding: 5rem 2rem 2rem;
+}
+.footer-grid {
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem; max-width: 1060px; margin: 0 auto 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(201,148,10,0.08);
+}
+.footer-brand-logo { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 1rem; }
+.footer-brand-name { font-family: 'Montserrat', sans-serif; font-size: 0.7rem; letter-spacing: 0.3em; color: var(--or); text-transform: uppercase; }
+.footer-brand-texte { font-size: 0.82rem; color: var(--muted); line-height: 1.75; max-width: 260px; }
+.footer-col h4 { font-family: 'Montserrat', sans-serif; font-size: 0.6rem; font-weight: 400; letter-spacing: 0.25em; text-transform: uppercase; color: var(--or); margin-bottom: 1.2rem; }
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 0.6rem; }
+.footer-col ul a { text-decoration: none; font-size: 0.82rem; color: var(--muted); transition: color 0.3s; }
+.footer-col ul a:hover { color: var(--texte); }
+.address-line { font-size: 0.82rem; color: var(--muted); }
+.footer-bottom {
+  display: flex; justify-content: space-between; align-items: center;
+  max-width: 1060px; margin: 0 auto; padding-top: 1.5rem; flex-wrap: wrap; gap: 0.5rem;
+}
+.footer-copy { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.05em; }
+.footer-ase { font-family: 'Montserrat', sans-serif; font-size: 0.65rem; letter-spacing: 0.25em; color: var(--or); text-transform: uppercase; }
+
+/* ── RESPONSIVE (identique) ───────────────────────────── */
+@media (max-width: 900px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+@media (max-width: 700px) {
+  nav { padding: 0 1.2rem; }
+  .menu-toggle { display: flex; }
+  .nav-links {
+    position: fixed; top: var(--nav-h); left: 0; right: 0;
+    flex-direction: column; background: rgba(13,9,6,0.98);
+    backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(201,148,10,0.18);
+    padding: 0.5rem 2rem 2rem; gap: 0; z-index: 9999;
+    transform: translateY(-110%); opacity: 0;
+    transition: transform 0.35s ease, opacity 0.3s ease;
+    pointer-events: none;
+  }
+  .nav-links.active { transform: translateY(0); opacity: 1; pointer-events: auto; }
+  .nav-links a { font-size: 0.78rem; padding: 1rem 0; min-height: 48px; border-bottom: 1px solid rgba(201,148,10,0.08); width: 100%; }
+  .nav-links li:last-child a { border-bottom: none; }
+  .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+  .covenant-list, .commitment-list { columns: 1; }
+  .doctrine-hero { min-height: 40vh; }
+}
+@media (max-width: 480px) {
+  :root { --nav-h: 64px; }
+  .page-content { padding: 2rem 1.5rem 4rem; }
+  .section-title { font-size: 1.8rem; padding-left: 1rem; }
+  .invocation { padding: 2rem; }
+}
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <a href="index.html" class="nav-logo" aria-label="Retour à l'accueil">
+    <div class="logo-mark lm-md" style="color: var(--or);" aria-hidden="true">
+      <div class="logo-outer"></div>
+      <div class="logo-inner"></div>
+    </div>
+    <span class="nav-wordmark">AYO</span>
+  </a>
+
+  <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-label="Ouvrir le menu" aria-controls="nav-links">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <ul class="nav-links" id="nav-links" role="list">
+    <li><a href="doctrine.html">Doctrine</a></li>
+    <li><a href="guardians.html">Guardians</a></li>
+    <li><a href="reciprocity.html">Reciprocity</a></li>
+    <li><a href="porto-novo.html">Porto-Novo</a></li>
+  </ul>
+</nav>
+
+<!-- HERO SPÉCIFIQUE DOCTRINE -->
+<div class="doctrine-hero">
+  <div class="doctrine-hero-bg"></div>
+  <div class="doctrine-hero-overlay"></div>
+  <div class="doctrine-hero-content">
+    <h1>THE DOCTRINE</h1>
+    <div class="subhead">the living memory of Fà and Vodoun</div>
+  </div>
+</div>
+
+<main class="page-content">
+
+  <!-- PREFACE -->
+  <div class="section-title">Preface</div>
+  <p>In the beginning there were no borders and no temples,<br>
+  only a single Breath ; bearer of the Name and of Memory.<br>
+  From that Breath were born the visible and the invisible worlds,<br>
+  and in the heart of every being, the Source placed a spark of itself;<br>
+  a spark our ancestors called <span class="term">Ori</span>,<br>
+  the inner light through which the soul remembers its divine origin.</p>
+
+  <p>That Source, the peoples of this land have named <span class="highlight">Mawu-Lisa</span>;<br>
+  a dual and complete principle: <span class="term">Mawu</span>, the lunar gentleness;<br>
+  <span class="term">Lisa</span>, the solar clarity.<br>
+  Mawu-Lisa is the respiration of the universe,<br>
+  the perfect balance between feminine and masculine,<br>
+  between rest and movement, creation and measure.</p>
+
+  <p>From this divine unity flows the Law of <span class="term">Fà</span>,<br>
+  the first language of Creation, the living memory of the universe.<br>
+  Fà is not a dogma: it is a sacred science,<br>
+  a system of balance between forces, ancestors, and the living.<br>
+  It is the Word that orders chaos,<br>
+  the mirror through which humanity converses with the Source.</p>
+
+  <p>Ayo Traditions is founded upon this Law,<br>
+  born on the soil of Benin;<br>
+  the land of the Fon, the Adja, the Bariba;<br>
+  the land of masks, forests, and ancestors.<br>
+  We carry the memory of the <span class="highlight">Vodoun</span>, not as folklore,<br>
+  but as living knowledge: a wisdom of connection, a technology of the spirit.</p>
+
+  <p>We recognize our Yoruba brothers and the path of the Orisha,<br>
+  for the Source is one, though the tongues are many.<br>
+  Yet our voice is that of Fà;<br>
+  our center is that of the Vodoun;<br>
+  and our mission is to reaffirm the spiritual identity of Benin<br>
+  as a matrix of reconciliation and teaching for the world.</p>
+
+  <p>Ayo Traditions does not seek to convert — it reminds.<br>
+  It calls each being to remembrance:<br>
+  to restore the unity between head (<span class="term">Ori</span>), earth (<span class="term">Ayi</span>), and word (<span class="term">Gbè</span>).<br>
+  It teaches that true spirituality does not oppose modernity;<br>
+  it heals it, re-enchants it, and returns it to the service of life.</p>
+
+  <p>The word <span class="term">Ayo</span> means joy;<br>
+  the profound joy that arises when the soul and the world are in harmony,<br>
+  when Fà, the Word, and the Earth breathe together.<br>
+  This joy is our sign, our seal, our promise.</p>
+
+  <p>Ayo Traditions was born in Porto-Novo,<br>
+  where memory meets modernity,<br>
+  where the Vodoun remembers that it is universal.</p>
+
+  <p>We carry the Word of Fà like a quiet flame:<br>
+  not to shine, but to illuminate the path home.<br>
+  For whoever returns to Mawu-Lisa,<br>
+  restoring the bond with ancestors and with the Earth,<br>
+  becomes a light for the world.</p>
+
+  <p>Ayo Traditions belongs to no one,<br>
+  but in it, everyone finds the part of themselves that remembers.</p>
+
+  <!-- I. FOUNDATIONS -->
+  <div class="section-title">I. Foundations of the Doctrine</div>
+  <p>Before separation, before names, before form,<br>
+  there was the infinite and silent Breath — <span class="highlight">Mawu-Lisa</span>,<br>
+  the total Being: stillness and movement, visible and invisible.</p>
+
+  <p><span class="term">Mawu</span> is the womb of the world, the fertile night from which light emerges.<br>
+  <span class="term">Lisa</span> is order and daylight, the rhythm and measure of existence.<br>
+  Their union engenders the dance of creation:<br>
+  day and night, woman and man, spirit and matter, all woven as one.</p>
+
+  <p>Everything that exists, from the smallest grain of sand to human consciousness,<br>
+  is traversed by their double respiration.<br>
+  Thus, separation is only appearance:<br>
+  the many dwell in the One, and the One speaks through the many.</p>
+
+  <p>To recognize Mawu-Lisa is to understand that every being<br>
+  carries a divine principle and the obligation of balance.<br>
+  The world is not exile, but a living altar where the Source reveals itself.</p>
+
+  <p>When Mawu-Lisa desired manifestation, It spoke.<br>
+  That Word became <span class="term">Fà</span> — the Law of the Word,<br>
+  the invisible web that connects all worlds and orders all destinies.</p>
+
+  <p>Fà is not only a divinatory system;<br>
+  it is the very language of creation,<br>
+  the code through which the universe understands itself and adjusts its harmony.<br>
+  Its signs are faces of truth,<br>
+  its verses, mirrors in which humanity learns to read its reflection.</p>
+
+  <p>Fà teaches that every event, every encounter,<br>
+  carries a message to be deciphered.<br>
+  To read Fà is to read the memory of the world —<br>
+  to hear the Source speaking through matter.</p>
+
+  <p>The <span class="highlight">Vodoun</span> is the garment of the Word.<br>
+  It is the form by which Fà incarnates in nature and in the forces.<br>
+  Each Vodoun is a divine function,<br>
+  a conscious energy maintaining order among elements, seasons, and beings.</p>
+
+  <p>Thus <span class="term">Gu</span> forges the tools of work and discipline.<br>
+  <span class="term">Sakpata</span> purifies the Earth and teaches that all healing comes from the soil.<br>
+  <span class="term">Heviosso</span> brings justice and lightning that reveals.<br>
+  <span class="term">Dan</span> maintains movement and rhythm.<br>
+  <span class="term">Legba</span> guards the thresholds and watches over the Word.</p>
+
+  <p>These are not myths or idols:<br>
+  they are living laws, present in nature and in the human body.<br>
+  To honor the Vodoun is to honor the function it represents —<br>
+  for true worship is knowledge of connection.</p>
+
+  <p>Humankind is not above the forces, but their mediator.<br>
+  Within us live <span class="term">Gbè</span> (the Word), <span class="term">Mi</span> (the Breath), <span class="term">Tèdo</span> (the body), and above all <span class="term">Ori</span> —<br>
+  the point of light where Mawu-Lisa remembers Itself.</p>
+
+  <p><span class="term">Ori</span> is the compass of destiny.<br>
+  It chooses, before birth, the path the soul will walk.<br>
+  But once incarnated, the human forgets.<br>
+  He wanders amid noise, fear, and confusion.</p>
+
+  <p>The role of Fà and the Vodoun is to remind the soul of its Ori.<br>
+  The role of the initiate is to walk each day toward that remembrance,<br>
+  until transparent once more to the light of Mawu-Lisa.</p>
+
+  <p>All that departs must return.<br>
+  This is the movement of life, of wind, of time.<br>
+  The return is not punishment; it is the promise of Fà:<br>
+  the curve by which consciousness realigns itself with its axis.</p>
+
+  <p>To return is to reconcile —<br>
+  with the Earth, with the ancestors, with the Word.<br>
+  It is to repair the ruptures of blood and memory.<br>
+  It is to restore to the world what the world has lent.</p>
+
+  <p>Ayo Traditions calls this movement the <span class="highlight">Path of Remembrance</span>.<br>
+  It is not a dogma, but a direction:<br>
+  the heart aligned with Fà, the gesture that heals, the word that connects.</p>
+
+  <p>The return is the gentlest law of the universe.<br>
+  For it is written in Fà that all which was scattered<br>
+  shall return to the hand of Mawu-Lisa,<br>
+  to be known, understood, and loved.</p>
+
+  <!-- II. PHILOSOPHY -->
+  <div class="section-title">II. The Philosophy of Ayo Traditions</div>
+  <p>Ayo Traditions does not preach; it accompanies.<br>
+  For no one can reveal to another what they have not heard within.<br>
+  The guide is not a master, but a keeper of thresholds.</p>
+
+  <p>Healing is reconciliation.<br>
+  It is not the erasure of pain, but the restoration of meaning.<br>
+  Healing is not external; it is the recovery of memory.</p>
+
+  <p>To serve is to offer one’s breath to life.<br>
+  Service is not charity; it is a cosmic function.<br>
+  Through service, one participates in the circulation of <span class="term">Ase</span>;<br>
+  the vital energy that animates and orders all things.</p>
+
+  <p>Balance is the heartbeat of practice.<br>
+  Without it, knowledge becomes pride and faith becomes superstition.<br>
+  The initiate learns not to choose between forces, but to harmonize them.</p>
+
+  <p>Initiation is not an event; it is a rhythm.<br>
+  Every day offers both a test and a revelation.<br>
+  Wisdom is not a summit to reach,<br>
+  but a path to inhabit.</p>
+
+  <!-- III. LAWS OF PRACTICE -->
+  <div class="section-title">III. The Laws of Practice</div>
+  <div class="living-law">
+    <div class="law-item"><h4>Oro tó yé – The Right Word</h4><p>Prayer in motion. To speak only what builds and heals.</p></div>
+    <div class="law-item"><h4>Sacred Silence</h4><p>The matrix of Fà. Not absence, but fullness before the Word.</p></div>
+    <div class="law-item"><h4>Ébó – The Offering</h4><p>The law of circulation. Every conscious gift is an act of balance.</p></div>
+    <div class="law-item"><h4>The Secret</h4><p>The veil that protects truth. Revelation follows readiness.</p></div>
+    <div class="law-item"><h4>Ori</h4><p>The dwelling of Mawu-Lisa within. To honor one’s Ori is to honor the Source.</p></div>
+  </div>
+
+  <!-- IV. TUTELARY FORCES -->
+  <div class="section-title">IV. The Tutelary Forces</div>
+  <p><strong><span class="term">Mawu-Lisa</span></strong> — the Source and Duality.<br>
+  <strong><span class="term">Legba</span></strong> — the Gate and the Word.<br>
+  <strong><span class="term">Gu</span></strong> — Work and Fire.<br>
+  <strong><span class="term">Sakpata</span></strong> — Earth and Healing.<br>
+  <strong><span class="term">Heviosso</span></strong> — Justice and Lightning.<br>
+  <strong><span class="term">Dan</span></strong> — Movement and Harmony.<br>
+  <strong><span class="term">Yemoja</span></strong> — Memory and Compassion.</p>
+  <p>These forces are not to be worshiped, but embodied.<br>
+  For each lives within the awakened human being.</p>
+
+  <!-- V. PURPOSE OF RETURN -->
+  <div class="section-title">V. The Purpose of Return</div>
+  <p><strong><span class="term">Emi</span></strong> — the Breath.<br>
+  <strong><span class="term">Oro</span></strong> — the Restored Word.<br>
+  <strong><span class="term">Ranti</span></strong> — the Memory Recovered.<br>
+  <strong><span class="term">Alafia</span></strong> — Reconciliation and Peace.<br>
+  <strong><span class="term">Ayo</span></strong> — the Joy of Return.</p>
+  <p>These five steps are one spiral of remembrance.<br>
+  The return is not a journey elsewhere,<br>
+  but the rediscovery of what never departed.<br>
+  He who remembers becomes a witness of the Source.</p>
+
+  <!-- VI. COVENANT -->
+  <div class="section-title">VI. The Covenant of Ayo Traditions</div>
+  <ul class="covenant-list">
+    <li>I remember.</li>
+    <li>I honor the Earth.</li>
+    <li>I speak with integrity.</li>
+    <li>I protect the secret.</li>
+    <li>I share joy.</li>
+    <li>I serve without domination.</li>
+  </ul>
+  <p>I pledge to live according to the Law of Fà,<br>
+  to love according to the measure of Vodoun,<br>
+  and to remember according to the light of my <span class="term">Ori</span>.</p>
+  <p>May my word be true,<br>
+  my silence fertile,<br>
+  my life an offering.<br>
+  So be it. so be Ayo.</p>
+
+  <!-- VII. OATH OF RETURN -->
+  <div class="section-title">VII. The Oath of Return</div>
+  <p>Ayo Traditions teaches that nothing is lost.<br>
+  What was scattered shall be gathered;<br>
+  what was forgotten shall be remembered;<br>
+  what was wounded shall be healed.</p>
+
+  <p>To return does not mean to flee the world,<br>
+  but to inhabit it consciously.<br>
+  The visible and invisible look at one another,<br>
+  speak to one another, and nourish one another.</p>
+
+  <p>The ancestors are not dead; they have changed their dwelling.<br>
+  The living are not alone; they continue the sentence begun before them.</p>
+
+  <p>Joy is not emotion but transparency : <span class="term">Ayo</span>.<br>
+  It is the dance of Mawu and Lisa within the awakened human.</p>
+
+  <p>We make alliance not with a religion,<br>
+  but with life itself.<br>
+  Ayo Traditions belongs to no one:<br>
+  it belongs to the consciousness of those who remember.</p>
+
+  <!-- INVOCATION -->
+  <div class="invocation">
+    <p>O Mawu-Lisa, Breath of breaths,<br>
+    we recognize You in the rain and in the word,<br>
+    in the wind that sows and in the hand that harvests.</p>
+    <p>Make of our lives songs of gratitude,<br>
+    of our gestures acts of repair,<br>
+    of our words pathways of light.</p>
+    <p>May joy dwell in our steps,<br>
+    may peace dwell in our hearts,<br>
+    and may Memory dwell in the world.</p>
+    <p>So be it. so be Ayo.</p>
+  </div>
+
+  <!-- GLOSSARY -->
+  <div class="section-title">Doctrinal Glossary</div>
+  <p class="verse">The sacred word does not explain; it reveals.</p>
+
+  <div class="glossary-term">Ase (Ashe)</div>
+  <div class="glossary-def">Universal vital power. The living energy through which Mawu-Lisa animates and sustains creation. To act with Ase is alignment with the Source.</div>
+
+  <div class="glossary-term">Emi</div>
+  <div class="glossary-def">The breath of life. The inhalation of Mawu-Lisa within all beings — the subtle link between soul and body.</div>
+
+  <div class="glossary-term">Ayo</div>
+  <div class="glossary-def">Joy in Fon and Yoruba. The resonance between the soul (Ori), the Word (Fà), and the Earth (Ayi). The signature of harmony restored.</div>
+
+  <div class="glossary-term">Ayi</div>
+  <div class="glossary-def">The Earth; living, conscious, generous. The memory of the ancestors and the altar of daily life. To walk upon Ayi is to pray without words.</div>
+
+  <div class="glossary-term">Fà</div>
+  <div class="glossary-def">The sacred language and law of creation. A system of cosmic intelligence that reveals order through symbols and signs. Fà does not predict; it reminds.</div>
+
+  <div class="glossary-term">Gbè</div>
+  <div class="glossary-def">The living Word; speech as a creative act. The bridge between the unseen and the visible. To speak in truth is to allow Ase to flow.</div>
+
+  <div class="glossary-term">Ori</div>
+  <div class="glossary-def">The spiritual head, the personal spark of Mawu-Lisa. Before birth, every soul chooses its Ori; the path and purpose of its life.</div>
+
+  <div class="glossary-term">Ranti</div>
+  <div class="glossary-def">Sacred remembrance. To reintegrate oneself into the eternal continuity of being. The one who remembers has already returned.</div>
+
+  <div class="glossary-term">Mawu-Lisa</div>
+  <div class="glossary-def">The supreme principle, the dual Source of all creation. Mawu is the moon – gentleness; Lisa is the sun – order. Their union generates the rhythm of existence.</div>
+
+  <div class="glossary-term">Legba</div>
+  <div class="glossary-def">The guardian of thresholds, the messenger between worlds. No prayer, ritual, or reading of Fà begins without Legba.</div>
+
+  <div class="glossary-term">Gu</div>
+  <div class="glossary-def">The force of iron and fire – the principle of work, craftsmanship, and transformation. The discipline that shapes chaos into order.</div>
+
+  <div class="glossary-term">Sakpata</div>
+  <div class="glossary-def">Spirit of the Earth and guardian of healing. To heal is to restore the dialogue between human and soil.</div>
+
+  <div class="glossary-term">Heviosso</div>
+  <div class="glossary-def">The thunder, the lightning, the law of truth. Truth does not punish; it enlightens.</div>
+
+  <div class="glossary-term">Dan</div>
+  <div class="glossary-def">The rainbow serpent, symbol of rhythm and movement. To follow Dan is to live in harmony with the pulse of existence.</div>
+
+  <div class="glossary-term">Yemoja (Yemaya)</div>
+  <div class="glossary-def">Mother of waters, guardian of compassion and emotional wisdom. Where Yemoja flows, pain becomes remembrance.</div>
+
+  <!-- LIVING LAWS -->
+  <div class="section-title">The Living Laws</div>
+  <ol style="margin-left: 2rem; color: var(--muted);">
+    <li><strong><span class="term">Oro tó yé</span> – The Right Word:</strong> To speak only what builds and heals. Every word is a seed.</li>
+    <li><strong><span class="term">The Sacred Silence</span>:</strong> The silence of Fà is fullness before the Word.</li>
+    <li><strong><span class="term">Ébó</span> – The Offering:</strong> To give in order to restore circulation. Every conscious gift is an act of balance.</li>
+    <li><strong><span class="term">The Secret</span>:</strong> The sacred must be veiled. Revelation follows readiness.</li>
+    <li><strong><span class="term">Ori</span>:</strong> To honor one’s Ori is to honor the dwelling of the Source within.</li>
+  </ol>
+
+  <div class="section-title">The Path of Return</div>
+  <p><strong><span class="term">Emi</span> – The Breath.<br>
+  <span class="term">Oro</span> – The Restored Word.<br>
+  <span class="term">Ranti</span> – The Memory.<br>
+  <span class="term">Alafia</span> – Reconciliation and Peace.<br>
+  <span class="term">Ayo</span> – Joy, fulfillment, completion.</strong></p>
+  <p>The Return is not a movement outward but a state of harmony within.</p>
+
+  <div class="section-title">The Commitment</div>
+  <ul class="commitment-list">
+    <li>I remember.</li>
+    <li>I honor the Earth.</li>
+    <li>I speak truthfully.</li>
+    <li>I keep the sacred veil.</li>
+    <li>I share joy.</li>
+    <li>I serve in humility.</li>
+  </ul>
+  <p>May my life be an offering.<br>So be it — so be Ayo.</p>
+
+  <!-- AFTERWORD -->
+  <div class="section-title">Afterword</div>
+  <p>Ayo Traditions was born in Porto-Novo, the meeting point of spirit and earth.<br>
+  It speaks from the heart of Fà to the heart of the world.<br>
+  This glossary is not to be studied but lived.<br>
+  It is an invitation to coherence, to presence, to joy.</p>
+  <p>As long as one being breathes in awareness,<br>
+  the Breath of Mawu-Lisa will never fade.</p>
+
+  <div class="ornament" style="margin-top: 4rem;"><div class="ornament-diamond"></div></div>
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand-logo">
+        <div class="logo-mark lm-sm" style="color: var(--or);" aria-hidden="true">
+          <div class="logo-outer"></div>
+          <div class="logo-inner"></div>
+        </div>
+        <span class="footer-brand-name">AYO TRADITIONS</span>
+      </div>
+      <p class="footer-brand-texte">We carry the memory of Vodoun as living knowledge. Our mission is to make Benin a matrix of reconciliation for the world.</p>
+    </div>
+    <div class="footer-col">
+      <h4>The house</h4>
+      <ul>
+        <li><a href="doctrine.html">The doctrine</a></li>
+        <li><a href="guardians.html">The guardians</a></li>
+        <li><a href="reciprocity.html">Reciprocity</a></li>
+        <li><a href="porto-novo.html">Porto-Novo</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>The paths</h4>
+      <ul>
+        <li><a href="index.html#card-ibu">Ibú — The threshold</a></li>
+        <li><a href="index.html#card-orule">Òrùlé — The hearth</a></li>
+        <li><a href="index.html#card-ona">Ayo Ònà</a></li>
+        <li><a href="index.html#ecouter">Listening to memory</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="index.html#contact">Write</a></li>
+        <li><a href="index.html#newsletter">Monthly letter</a></li>
+        <li class="address-line">Adjinān Vodoun Honto</li>
+        <li class="address-line">Porto-Novo, Benin</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© Ayo Traditions — Porto-Novo, Benin</span>
+    <span class="footer-ase">Ase o · Axé · Ashe</span>
+  </div>
+</footer>
+
+<script>
+// ── NAVBAR SCROLL
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 50);
+}, { passive: true });
+
+// ── MOBILE MENU
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks   = document.getElementById('nav-links');
+
+function closeMenu() {
+  navLinks.classList.remove('active');
+  menuToggle.setAttribute('aria-expanded', 'false');
+  const s = menuToggle.querySelectorAll('span');
+  s[0].style.transform = ''; s[1].style.opacity = ''; s[2].style.transform = '';
+}
+function openMenu() {
+  navLinks.classList.add('active');
+  menuToggle.setAttribute('aria-expanded', 'true');
+  const s = menuToggle.querySelectorAll('span');
+  s[0].style.transform = 'translateY(8px) rotate(45deg)';
+  s[1].style.opacity   = '0';
+  s[2].style.transform = 'translateY(-8px) rotate(-45deg)';
+}
+
+menuToggle.addEventListener('click', (e) => {
+  e.stopPropagation();
+  navLinks.classList.contains('active') ? closeMenu() : openMenu();
+});
+
+navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+document.addEventListener('click', (e) => {
+  if (navLinks.classList.contains('active') && !navbar.contains(e.target)) closeMenu();
+});
+</script>
+</body>
+</html>
