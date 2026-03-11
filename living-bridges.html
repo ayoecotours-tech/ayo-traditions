@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>document.documentElement.classList.add('js');</script>
+<title>Living Bridges — Ayo Traditions</title>
+<meta name="description" content="A Living Bridge is not a guide. It is the proof that the return is possible. Free 30-minute conversations with initiated afro-descendants, for the diaspora, in your language.">
+<link rel="canonical" href="https://ayotraditions.com/living-bridges">
+
+<!-- Open Graph -->
+<meta property="og:type"        content="website">
+<meta property="og:url"         content="https://ayotraditions.com/living-bridges">
+<meta property="og:title"       content="Living Bridges — Ayo Traditions">
+<meta property="og:description" content="Free 30-minute conversations with afro-descendants who have crossed the return path. In English, Portuguese, and French.">
+<meta property="og:image"       content="https://ayotraditions.com/og-image.jpg">
+
+<!-- Fonts — same as main site -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&family=Inter:wght@300;400;500&display=swap"
+      media="print" onload="this.media='all'">
+<noscript>
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&family=Inter:wght@300;400;500&display=swap">
+</noscript>
+
+<style>
+/* ═══════════════════════════════════════════════════════════
+   RESET & TOKENS — identical to main site
+   ═══════════════════════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --or:       #C9940A;
+  --or-pale:  #dba832;
+  --terre:    #3D2B1F;
+  --parche:   #E5E1D3;
+  --nuit:     #0F0F0F;
+  --surface:  #181310;
+  --surface2: #221A12;
+  --creme:    #F9F7F2;
+  --texte:    #D1C7B7;
+  --muted:    #9C8E77;
+  --nav-h:    80px;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); }
+
+body {
+  background: var(--nuit);
+  color: var(--texte);
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.8;
+  overflow-x: hidden;
+}
+
+::selection { background: var(--or); color: var(--nuit); }
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--nuit); }
+::-webkit-scrollbar-thumb { background: var(--or); }
+
+/* Grain overlay */
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9000;
+  opacity: 0.5;
+}
+
+/* ── LOGO MARK ─────────────────────────────────────────── */
+@keyframes breathe {
+  0%   { border-radius: 48% 52% 55% 45% / 46% 54% 46% 54%; transform: rotate(0deg)   scale(1);    }
+  12%  { border-radius: 52% 48% 46% 54% / 54% 46% 56% 44%; transform: rotate(45deg)  scale(1.03); }
+  25%  { border-radius: 44% 56% 52% 48% / 48% 52% 44% 56%; transform: rotate(90deg)  scale(0.97); }
+  37%  { border-radius: 56% 44% 48% 52% / 52% 48% 58% 42%; transform: rotate(135deg) scale(1.04); }
+  50%  { border-radius: 46% 54% 56% 44% / 44% 56% 48% 52%; transform: rotate(180deg) scale(0.98); }
+  62%  { border-radius: 54% 46% 44% 56% / 56% 44% 52% 48%; transform: rotate(225deg) scale(1.03); }
+  75%  { border-radius: 42% 58% 50% 50% / 50% 50% 42% 58%; transform: rotate(270deg) scale(0.96); }
+  87%  { border-radius: 50% 50% 54% 46% / 46% 54% 50% 50%; transform: rotate(315deg) scale(1.02); }
+  100% { border-radius: 48% 52% 55% 45% / 46% 54% 46% 54%; transform: rotate(360deg) scale(1);    }
+}
+@keyframes breathe-slow {
+  0%   { border-radius: 48% 52% 55% 45% / 46% 54% 46% 54%; transform: rotate(0deg)   scale(1);    }
+  25%  { border-radius: 52% 48% 46% 54% / 54% 46% 56% 44%; transform: rotate(90deg)  scale(1.04); }
+  50%  { border-radius: 44% 56% 52% 48% / 48% 52% 44% 56%; transform: rotate(180deg) scale(0.97); }
+  75%  { border-radius: 56% 44% 48% 52% / 52% 48% 58% 42%; transform: rotate(270deg) scale(1.03); }
+  100% { border-radius: 48% 52% 55% 45% / 46% 54% 46% 54%; transform: rotate(360deg) scale(1);    }
+}
+
+.logo-mark { position: relative; display: flex; align-items: center; justify-content: center; }
+.logo-outer {
+  position: absolute;
+  border: 1.5px solid currentColor;
+  border-radius: 48% 52% 55% 45% / 46% 54% 46% 54%;
+  animation: breathe-slow 20s ease-in-out infinite;
+}
+.logo-inner { position: absolute; border: 1px solid currentColor; border-radius: 50%; opacity: 0.65; }
+.lm-xl { width: 110px; height: 110px; }
+.lm-xl .logo-outer { width: 100px; height: 100px; animation: breathe 14s ease-in-out infinite; }
+.lm-xl .logo-inner { width:  52px; height:  52px; }
+.lm-md { width: 36px; height: 36px; }
+.lm-md .logo-outer { width:  32px; height:  32px; }
+.lm-md .logo-inner { width:  16px; height:  16px; }
+@media (prefers-reduced-motion: reduce) { .logo-outer { animation: none; } }
+
+h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 300; }
+
+/* ── NAVIGATION ─────────────────────────────────────────── */
+#menu-backdrop {
+  display: none; position: fixed; inset: 0;
+  background: rgba(0,0,0,0.55); z-index: 9999;
+  backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px);
+  opacity: 0; transition: opacity 0.3s ease; pointer-events: none;
+}
+nav.menu-open #menu-backdrop { display: block; opacity: 1; pointer-events: auto; }
+
+nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  height: var(--nav-h); z-index: 10000;
+  padding: 0 2.5rem;
+  display: flex; justify-content: space-between; align-items: center;
+  transition: background 0.5s ease;
+}
+nav.scrolled {
+  background: rgba(15,10,8,0.96);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(201,148,10,0.12);
+}
+.nav-logo { display: flex; align-items: center; gap: 0.9rem; text-decoration: none; outline-offset: 4px; }
+.nav-wordmark {
+  font-family: 'Montserrat', sans-serif; font-weight: 200;
+  font-size: 1.15rem; letter-spacing: 0.28em;
+  color: var(--or); text-transform: uppercase;
+}
+.nav-links { display: flex; gap: 0.5rem; list-style: none; }
+.nav-links a {
+  text-decoration: none; color: var(--muted);
+  font-family: 'Montserrat', sans-serif; font-size: 0.65rem;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  transition: color 0.3s; padding: 0.8rem 0.6rem;
+  display: flex; align-items: center; min-height: 44px;
+}
+.nav-links a:hover, .nav-links a:focus { color: var(--or); outline: none; }
+.nav-links a.active { color: var(--or); }
+
+.menu-toggle {
+  display: none; flex-direction: column; justify-content: center;
+  cursor: pointer; padding: 0.8rem; border: none; background: transparent;
+  min-width: 44px; min-height: 44px; -webkit-tap-highlight-color: transparent;
+}
+.menu-toggle span {
+  width: 24px; height: 2px; background: var(--or);
+  margin: 3px 0; transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center; display: block;
+}
+
+/* ── LAYOUT ─────────────────────────────────────────────── */
+.container      { max-width: 780px;  margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: 1060px; margin: 0 auto; padding: 0 1.5rem; }
+
+/* ── ORNAMENT ───────────────────────────────────────────── */
+.ornament { display: flex; align-items: center; gap: 1.2rem; margin: 2.5rem 0; }
+.ornament::before, .ornament::after {
+  content: ''; flex: 1; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--or), transparent);
+}
+.ornament-diamond { width: 6px; height: 6px; background: var(--or); transform: rotate(45deg); flex-shrink: 0; }
+
+/* ── BUTTONS ─────────────────────────────────────────────── */
+.btn-primary {
+  display: inline-block; background: var(--or); color: var(--nuit);
+  font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 500;
+  letter-spacing: 0.22em; text-transform: uppercase; text-decoration: none;
+  padding: 1rem 2.2rem; border: none; cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease; outline-offset: 3px;
+}
+.btn-primary:hover  { background: var(--or-pale); transform: translateY(-1px); }
+.btn-primary:active { transform: translateY(0); }
+.btn-primary:focus  { outline: 2px solid var(--or-pale); }
+
+.btn-ghost {
+  display: inline-block; background: transparent; color: var(--texte);
+  font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 300;
+  letter-spacing: 0.22em; text-transform: uppercase; text-decoration: none;
+  padding: 1rem 2.2rem; border: 1px solid rgba(201,148,10,0.35); cursor: pointer;
+  transition: border-color 0.3s, color 0.3s; outline-offset: 3px;
+}
+.btn-ghost:hover { border-color: var(--or); color: var(--or); }
+.btn-ghost:focus { outline: 2px solid var(--or-pale); }
+
+/* ── SECTION LABELS & TITLES ─────────────────────────────── */
+.section-label {
+  display: inline-block; font-family: 'Montserrat', sans-serif;
+  font-size: 0.62rem; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--or); margin-bottom: 1.2rem;
+}
+.section-titre {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 200;
+  line-height: 1.2; letter-spacing: -0.01em;
+  color: var(--creme); margin-bottom: 2.5rem;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   HERO — LIVING BRIDGES
+   ═══════════════════════════════════════════════════════════ */
+#lb-hero {
+  min-height: 70vh;
+  display: flex; flex-direction: column;
+  justify-content: flex-end; align-items: flex-start;
+  padding: calc(var(--nav-h) + 5rem) 0 6rem;
+  position: relative; overflow: hidden;
+}
+
+/* Subtle earth-radial glow, no image needed */
+.lb-hero-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 80%, rgba(61,43,31,0.55) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 80% 20%, rgba(201,148,10,0.06) 0%, transparent 55%),
+    linear-gradient(180deg, #0a0705 0%, #14100a 60%, #1a1208 100%);
+}
+
+/* Animated horizontal line dividers — purely decorative */
+.lb-hero-lines {
+  position: absolute; inset: 0; pointer-events: none; overflow: hidden;
+}
+.lb-hero-lines::before,
+.lb-hero-lines::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(201,148,10,0.18) 30%, rgba(201,148,10,0.18) 70%, transparent 100%);
+}
+.lb-hero-lines::before { top: 38%; }
+.lb-hero-lines::after  { top: 72%; }
+
+.lb-hero-inner {
+  position: relative; z-index: 2;
+  padding: 0 1.5rem;
+  max-width: 1060px; margin: 0 auto; width: 100%;
+}
+
+.lb-hero-eyebrow {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.6rem; letter-spacing: 0.38em; text-transform: uppercase;
+  color: var(--or); margin-bottom: 1.8rem; display: block;
+}
+
+.lb-hero-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  font-weight: 100; letter-spacing: 0.04em;
+  color: var(--creme); line-height: 1;
+  margin-bottom: 1.8rem;
+}
+.lb-hero-title em {
+  font-style: normal; color: var(--or);
+  font-weight: 200;
+}
+
+.lb-hero-sub {
+  font-size: 0.95rem; font-weight: 300;
+  color: var(--texte); max-width: 520px;
+  line-height: 1.85; margin-bottom: 2.8rem;
+  letter-spacing: 0.01em;
+}
+
+.lb-hero-stat-row {
+  display: flex; gap: 3rem; flex-wrap: wrap;
+}
+.lb-stat {
+  display: flex; flex-direction: column; gap: 0.2rem;
+}
+.lb-stat-num {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem; font-weight: 100; color: var(--or);
+  letter-spacing: 0.04em; line-height: 1;
+}
+.lb-stat-label {
+  font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--muted);
+}
+
+.lb-hero-langs {
+  margin-top: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.62rem; letter-spacing: 0.32em; text-transform: uppercase;
+  color: rgba(201,148,10,0.55);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   DEFINITION SECTION
+   ═══════════════════════════════════════════════════════════ */
+#lb-definition {
+  padding: 7rem 0;
+  background: var(--surface);
+  position: relative;
+}
+
+/* Vertical gold rule on left */
+#lb-definition::before {
+  content: '';
+  position: absolute; left: 0; top: 0; bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, var(--or) 30%, var(--or) 70%, transparent);
+  opacity: 0.25;
+}
+
+.lb-def-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.lb-def-label-col {
+  position: relative;
+}
+
+.lb-def-watermark {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(4rem, 8vw, 7rem);
+  font-weight: 100;
+  color: rgba(201,148,10,0.06);
+  letter-spacing: 0.1em;
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+  margin-bottom: 2rem;
+}
+
+.lb-def-eyebrow {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.6rem; letter-spacing: 0.32em; text-transform: uppercase;
+  color: var(--or); margin-bottom: 1.2rem; display: block;
+}
+.lb-def-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 200; color: var(--creme); line-height: 1.25;
+  margin-bottom: 1.5rem;
+}
+
+.lb-def-text {
+  font-size: 1rem; line-height: 1.9;
+  color: var(--texte); margin-bottom: 1.5rem;
+}
+
+.lb-def-accent {
+  border-left: 2px solid var(--or);
+  padding: 1rem 0 1rem 1.6rem;
+  margin: 2rem 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem; font-weight: 200;
+  line-height: 1.65; color: var(--creme);
+  letter-spacing: 0.015em;
+}
+
+/* ── WHAT IT IS NOT / IS table ─────────────────────────── */
+.lb-is-not-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: rgba(201,148,10,0.1);
+  border: 1px solid rgba(201,148,10,0.12);
+  margin-top: 2rem;
+}
+
+.lb-is-not-cell {
+  background: var(--surface);
+  padding: 1.4rem 1.6rem;
+  transition: background 0.3s;
+}
+.lb-is-not-cell:hover { background: rgba(201,148,10,0.04); }
+.lb-is-not-cell.is-yes { background: rgba(61,43,31,0.4); }
+.lb-is-not-cell.is-yes:hover { background: rgba(61,43,31,0.6); }
+
+.lb-cell-tag {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.55rem; letter-spacing: 0.3em; text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.lb-cell-tag.no  { color: var(--muted); }
+.lb-cell-tag.yes { color: var(--or); }
+
+.lb-cell-text {
+  font-size: 0.85rem; color: var(--texte); line-height: 1.65;
+}
+.lb-cell-text strong { color: var(--creme); font-weight: 400; }
+
+/* ═══════════════════════════════════════════════════════════
+   BRIDGES SECTION — three profiles
+   ═══════════════════════════════════════════════════════════ */
+#lb-bridges {
+  padding: 8rem 0 6rem;
+}
+
+.lb-bridges-header {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+/* ── Profile grid ───────────────────────────────────────── */
+.lb-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+/* ── Individual profile card ────────────────────────────── */
+.bridge-card {
+  display: flex; flex-direction: column;
+  background: var(--surface);
+  border: 1px solid rgba(201,148,10,0.08);
+  transition: border-color 0.4s, background 0.4s;
+  position: relative;
+  overflow: hidden;
+}
+.bridge-card:hover {
+  border-color: rgba(201,148,10,0.25);
+  background: #1c1510;
+}
+
+/* Ifashola is featured — real person */
+.bridge-card.featured {
+  border-color: rgba(201,148,10,0.3);
+}
+.bridge-card.featured::before {
+  content: 'Available now';
+  position: absolute; top: 0; right: 0;
+  background: var(--or);
+  color: var(--nuit);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.52rem; font-weight: 500;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  padding: 0.38rem 0.9rem;
+  z-index: 3;
+}
+
+/* Placeholder cards — coming soon overlay */
+.bridge-card.placeholder {
+  border-color: rgba(201,148,10,0.06);
+}
+.bridge-card.placeholder::after {
+  content: 'Opening soon';
+  position: absolute; top: 0; right: 0;
+  background: rgba(201,148,10,0.1);
+  color: var(--or);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.52rem; font-weight: 500;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  padding: 0.38rem 0.9rem;
+  z-index: 3;
+  border-bottom: 1px solid rgba(201,148,10,0.18);
+  border-left: 1px solid rgba(201,148,10,0.18);
+}
+
+/* ── Portrait area ─────────────────────────────────────── */
+.bridge-portrait {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* Decorative layered gradient portrait for each bridge */
+.bridge-portrait-inner {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* Each person gets a unique earth-toned gradient field */
+.portrait-ifashola {
+  background:
+    radial-gradient(ellipse 60% 80% at 50% 30%, rgba(80,52,28,0.9) 0%, rgba(30,18,10,0.95) 100%);
+}
+.portrait-amara {
+  background:
+    radial-gradient(ellipse 60% 80% at 50% 30%, rgba(45,65,38,0.9) 0%, rgba(20,30,18,0.95) 100%);
+}
+.portrait-mariétou {
+  background:
+    radial-gradient(ellipse 60% 80% at 50% 30%, rgba(55,42,75,0.75) 0%, rgba(20,16,30,0.95) 100%);
+}
+
+/* Subtle texture lines inside portrait */
+.bridge-portrait-inner::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 8px,
+      rgba(201,148,10,0.025) 8px,
+      rgba(201,148,10,0.025) 9px
+    );
+}
+
+/* Organic logo mark as avatar — large */
+.portrait-mark {
+  position: relative; z-index: 2;
+  color: rgba(201,148,10,0.5);
+}
+.portrait-mark .logo-outer { animation: breathe 18s ease-in-out infinite; }
+
+/* Gradient fade to card body */
+.bridge-portrait::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 60px;
+  background: linear-gradient(to bottom, transparent, var(--surface));
+  transition: background 0.4s;
+}
+.bridge-card:hover .bridge-portrait::after { background: linear-gradient(to bottom, transparent, #1c1510); }
+.bridge-card.featured .bridge-portrait::after { background: linear-gradient(to bottom, transparent, var(--surface)); }
+.bridge-card.featured:hover .bridge-portrait::after { background: linear-gradient(to bottom, transparent, #1c1510); }
+
+/* ── Card body ─────────────────────────────────────────── */
+.bridge-body {
+  padding: 1.8rem 1.8rem 2.2rem;
+  display: flex; flex-direction: column;
+  flex-grow: 1;
+}
+
+.bridge-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.35rem; font-weight: 200;
+  color: var(--creme); letter-spacing: 0.04em;
+  margin-bottom: 0.35rem;
+}
+
+.bridge-origin {
+  font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 0.9rem;
+}
+
+.bridge-languages {
+  display: flex; gap: 0.5rem; flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+.lang-tag {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.58rem; font-weight: 500; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--or);
+  border: 1px solid rgba(201,148,10,0.3);
+  padding: 0.28rem 0.7rem;
+  transition: border-color 0.3s, color 0.3s;
+}
+.bridge-card:hover .lang-tag {
+  border-color: rgba(201,148,10,0.5);
+}
+
+/* Gold rule under languages */
+.bridge-rule {
+  width: 2rem; height: 1px;
+  background: var(--or); opacity: 0.5;
+  margin-bottom: 1.4rem;
+  flex-shrink: 0;
+}
+
+.bridge-text {
+  font-size: 0.88rem; line-height: 1.85;
+  color: var(--texte); margin-bottom: 1.8rem;
+  flex-grow: 1;
+}
+
+.bridge-footer {
+  padding-top: 1.4rem;
+  border-top: 1px solid rgba(201,148,10,0.1);
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 1rem;
+  margin-top: auto;
+}
+
+.bridge-cta-note {
+  font-size: 0.72rem; color: var(--muted);
+  letter-spacing: 0.02em;
+}
+.bridge-cta-note strong {
+  color: var(--creme); font-weight: 400; display: block;
+}
+
+/* ── Placeholder state ─────────────────────────────────── */
+.bridge-card.placeholder .bridge-text {
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   HOW IT WORKS — process strip
+   ═══════════════════════════════════════════════════════════ */
+#lb-how {
+  padding: 7rem 0;
+  background: var(--surface2);
+  position: relative; overflow: hidden;
+}
+
+#lb-how::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201,148,10,0.2), transparent);
+}
+#lb-how::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201,148,10,0.2), transparent);
+}
+
+.lb-how-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(201,148,10,0.08);
+  margin-top: 4rem;
+}
+
+.lb-step {
+  background: var(--surface2);
+  padding: 2.2rem 1.8rem;
+  transition: background 0.3s;
+}
+.lb-step:hover { background: rgba(61,43,31,0.35); }
+
+.lb-step-num {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem; font-weight: 100;
+  color: rgba(201,148,10,0.2);
+  letter-spacing: -0.02em;
+  line-height: 1; margin-bottom: 1rem;
+}
+
+.lb-step-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.78rem; font-weight: 400;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--creme); margin-bottom: 0.7rem;
+}
+
+.lb-step-text {
+  font-size: 0.84rem; line-height: 1.75; color: var(--muted);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   ETHICS BAND
+   ═══════════════════════════════════════════════════════════ */
+#lb-ethics {
+  padding: 6rem 0;
+}
+
+.lb-ethics-inner {
+  border-left: 2px solid rgba(201,148,10,0.35);
+  padding-left: 2.5rem;
+  max-width: 680px;
+}
+
+.lb-ethics-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.58rem; letter-spacing: 0.32em; text-transform: uppercase;
+  color: var(--or); margin-bottom: 1.2rem; display: block;
+}
+
+.lb-ethics-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 200; color: var(--creme);
+  line-height: 1.3; margin-bottom: 1.8rem;
+}
+
+.lb-ethics-items {
+  list-style: none; display: flex; flex-direction: column; gap: 0.9rem;
+}
+.lb-ethics-items li {
+  font-size: 0.88rem; color: var(--texte);
+  padding-left: 1.4rem; position: relative; line-height: 1.75;
+}
+.lb-ethics-items li::before {
+  content: '—'; position: absolute; left: 0;
+  color: var(--or); font-size: 0.75rem; top: 0.15rem;
+}
+.lb-ethics-items li strong { color: var(--creme); font-weight: 400; }
+
+/* ═══════════════════════════════════════════════════════════
+   BECOME A BRIDGE — soft CTA
+   ═══════════════════════════════════════════════════════════ */
+#lb-become {
+  padding: 6rem 0 8rem;
+  background: var(--surface);
+  text-align: center;
+}
+
+.lb-become-inner {
+  max-width: 580px; margin: 0 auto;
+}
+
+.lb-become-text {
+  font-size: 0.95rem; line-height: 1.9; color: var(--texte);
+  margin-bottom: 2.5rem;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   FOOTER — identical to main site
+   ═══════════════════════════════════════════════════════════ */
+footer {
+  background: var(--surface2);
+  padding: 5rem 0 2.5rem;
+  border-top: 1px solid rgba(201,148,10,0.1);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-brand-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem; font-weight: 400;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--or); margin-bottom: 1rem; display: block;
+}
+.footer-brand-texte {
+  font-size: 0.82rem; color: var(--muted); line-height: 1.75; max-width: 280px;
+}
+
+.footer-col h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.6rem; font-weight: 400;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--or); margin-bottom: 1.2rem;
+}
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 0.6rem; }
+.footer-col ul a {
+  text-decoration: none; font-size: 0.82rem;
+  color: var(--muted); transition: color 0.3s;
+}
+.footer-col ul a:hover { color: var(--texte); }
+.address-line { font-size: 0.82rem; color: var(--muted); }
+
+.footer-bottom {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-top: 1.5rem; flex-wrap: wrap; gap: 0.5rem;
+  border-top: 1px solid rgba(201,148,10,0.08);
+}
+.footer-copy { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.05em; }
+.footer-ase {
+  font-family: 'Montserrat', sans-serif; font-size: 0.65rem;
+  letter-spacing: 0.25em; color: var(--or); text-transform: uppercase;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SCROLL REVEAL
+   ═══════════════════════════════════════════════════════════ */
+.js .reveal {
+  opacity: 0; transform: translateY(18px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.js .reveal-stagger:nth-child(1) { transition-delay: 0s; }
+.js .reveal-stagger:nth-child(2) { transition-delay: 0.12s; }
+.js .reveal-stagger:nth-child(3) { transition-delay: 0.24s; }
+.js .reveal-stagger:nth-child(4) { transition-delay: 0.36s; }
+.js .bridge-card { opacity: 0; transform: translateY(22px); transition: opacity 0.8s ease, transform 0.8s ease, border-color 0.4s, background 0.4s; }
+.js .lb-step    { opacity: 0; transform: translateY(14px); transition: opacity 0.6s ease, transform 0.6s ease, background 0.3s; }
+.visible { opacity: 1 !important; transform: translateY(0) !important; }
+
+/* ═══════════════════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .lb-grid { grid-template-columns: 1fr 1fr; }
+  .bridge-card:last-child { grid-column: 1 / -1; max-width: 480px; margin: 0 auto; width: 100%; }
+  .lb-how-grid { grid-template-columns: 1fr 1fr; }
+  .lb-def-layout { grid-template-columns: 1fr; gap: 3rem; }
+  .lb-def-watermark { display: none; }
+}
+
+@media (max-width: 700px) {
+  nav { padding: 0 1.2rem; }
+  .js .menu-toggle { display: flex; }
+  .js .nav-links {
+    position: fixed; top: var(--nav-h); left: 0; right: 0;
+    flex-direction: column;
+    background: rgba(13,9,6,0.98);
+    backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(201,148,10,0.18);
+    padding: 0.5rem 2rem 2rem; gap: 0; z-index: 10001;
+    max-height: calc(100svh - var(--nav-h)); overflow-y: auto;
+    transform: translateY(-110%); opacity: 0;
+    transition: transform 0.35s ease, opacity 0.3s ease;
+    pointer-events: none;
+  }
+  .js .nav-links.active { transform: translateY(0); opacity: 1; pointer-events: auto; }
+  .nav-links a { font-size: 0.78rem; padding: 1rem 0; min-height: 48px; border-bottom: 1px solid rgba(201,148,10,0.08); }
+
+  .lb-hero-title { letter-spacing: 0.01em; }
+  .lb-hero-stat-row { gap: 2rem; }
+  .lb-grid { grid-template-columns: 1fr; }
+  .bridge-card:last-child { grid-column: auto; max-width: none; }
+  .lb-how-grid { grid-template-columns: 1fr; }
+  .lb-is-not-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+
+@media (max-width: 480px) {
+  .lb-def-layout { gap: 2rem; }
+  .bridge-body { padding: 1.4rem 1.4rem 1.8rem; }
+  .footer-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ─────────────────────────────────────────────────────── -->
+<nav id="navbar">
+  <div id="menu-backdrop" aria-hidden="true"></div>
+
+  <a href="index.html" class="nav-logo" aria-label="Back to home">
+    <div class="logo-mark lm-md" style="color: var(--or);" aria-hidden="true">
+      <div class="logo-outer"></div>
+      <div class="logo-inner"></div>
+    </div>
+    <span class="nav-wordmark">AYO</span>
+  </a>
+
+  <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-label="Open menu" aria-controls="nav-links">
+    <span></span><span></span><span></span>
+  </button>
+
+  <ul class="nav-links" id="nav-links" role="list">
+    <li><a href="index.html#doctrine">Doctrine</a></li>
+    <li><a href="living-bridges.html" class="active">Living Bridges</a></li>
+    <li><a href="index.html#reciprocite">Reciprocity</a></li>
+    <li><a href="index.html#porto-novo">Porto-Novo</a></li>
+  </ul>
+</nav>
+
+<!-- ══════════════════════════════════════════════════════════════
+     HERO
+     ══════════════════════════════════════════════════════════════ -->
+<section id="lb-hero" aria-label="Living Bridges — page introduction">
+  <div class="lb-hero-bg" aria-hidden="true"></div>
+  <div class="lb-hero-lines" aria-hidden="true"></div>
+
+  <div class="lb-hero-inner">
+    <span class="lb-hero-eyebrow reveal">Ayo Traditions · Porto-Novo, Benin</span>
+
+    <h1 class="lb-hero-title reveal">
+      Living<br><em>Bridges</em>
+    </h1>
+
+    <p class="lb-hero-sub reveal">
+      They have crossed the water — in both directions.<br>
+      They know the shore you are standing on.<br>
+      They offer their hand for free.
+    </p>
+
+    <div class="lb-hero-stat-row reveal">
+      <div class="lb-stat">
+        <span class="lb-stat-num">30</span>
+        <span class="lb-stat-label">minutes · free</span>
+      </div>
+      <div class="lb-stat">
+        <span class="lb-stat-num">3</span>
+        <span class="lb-stat-label">languages</span>
+      </div>
+      <div class="lb-stat">
+        <span class="lb-stat-num">0</span>
+        <span class="lb-stat-label">conditions</span>
+      </div>
+    </div>
+
+    <p class="lb-hero-langs reveal" aria-label="Available in English, Portuguese and French">
+      English &nbsp;·&nbsp; Português &nbsp;·&nbsp; Français
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     DEFINITION — what is a Living Bridge?
+     ══════════════════════════════════════════════════════════════ -->
+<section id="lb-definition" aria-label="What is a Living Bridge?">
+  <div class="container-wide">
+    <div class="lb-def-layout">
+
+      <!-- Left: watermark + label -->
+      <div class="lb-def-label-col">
+        <div class="lb-def-watermark" aria-hidden="true">Living<br>Bridge</div>
+        <span class="lb-def-eyebrow reveal">A definition</span>
+      </div>
+
+      <!-- Right: text -->
+      <div>
+        <p class="lb-def-text reveal">
+          A guide shows the way from outside. A Living Bridge <em>is</em> the way — someone who has crossed, who carries the memory of both shores in their body, and who offers their hand to those still standing at the water's edge.
+        </p>
+
+        <blockquote class="lb-def-accent reveal">
+          "They speak your language, they know your fears, they carry the same wound. They are not here to teach you. They are the proof that the return is possible."
+        </blockquote>
+
+        <p class="lb-def-text reveal">
+          A Living Bridge is not a Babalawo, not a therapist, not a salesperson. They have received initiation — Fâ, Vodoun — and they have undergone the return path as described in the Ayo Traditions doctrine. They are, in the precise words of that doctrine, someone who has begun their own return and now holds a lantern for others. No more than that. No less.
+        </p>
+
+        <!-- ── WHAT IT IS NOT / IS table ─────────── -->
+        <div class="lb-is-not-grid reveal" role="list" aria-label="What a Living Bridge is and is not">
+
+          <div class="lb-is-not-cell" role="listitem">
+            <div class="lb-cell-tag no">Not this</div>
+            <p class="lb-cell-text">A guru or spiritual authority telling you what to believe or do.</p>
+          </div>
+          <div class="lb-is-not-cell is-yes" role="listitem">
+            <div class="lb-cell-tag yes">This</div>
+            <p class="lb-cell-text"><strong>An elder sibling</strong> — further along on this specific path, not above you on any other.</p>
+          </div>
+
+          <div class="lb-is-not-cell" role="listitem">
+            <div class="lb-cell-tag no">Not this</div>
+            <p class="lb-cell-text">A therapist or life coach offering diagnosis, advice, or solutions.</p>
+          </div>
+          <div class="lb-is-not-cell is-yes" role="listitem">
+            <div class="lb-cell-tag yes">This</div>
+            <p class="lb-cell-text"><strong>A witness</strong> — someone who sees you without judging, and reflects you back to yourself.</p>
+          </div>
+
+          <div class="lb-is-not-cell" role="listitem">
+            <div class="lb-cell-tag no">Not this</div>
+            <p class="lb-cell-text">A representative of Ayo Traditions selling programmes or pushing an agenda.</p>
+          </div>
+          <div class="lb-is-not-cell is-yes" role="listitem">
+            <div class="lb-cell-tag yes">This</div>
+            <p class="lb-cell-text"><strong>A threshold</strong> — the living in-between, where one world can meet another, safely.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     THE THREE BRIDGES
+     ══════════════════════════════════════════════════════════════ -->
+<section id="lb-bridges" aria-labelledby="lb-bridges-heading">
+  <div class="container-wide">
+
+    <div class="lb-bridges-header">
+      <span class="section-label reveal" style="display:block; text-align:center;">The bridges</span>
+      <h2 class="section-titre reveal" id="lb-bridges-heading" style="text-align:center;">
+        Three people.<br>Three languages.<br>One source.
+      </h2>
+      <p class="reveal" style="max-width:520px; margin:0 auto; font-size:0.92rem; color:var(--muted); line-height:1.85;">
+        Each Bridge has crossed. Each one offers 30 minutes, freely, with no agenda. Choose the voice that feels closest to yours.
+      </p>
+    </div>
+
+    <div class="lb-grid">
+
+      <!-- ─── IFASHOLA — Featured (real) ──────────────────────── -->
+      <article class="bridge-card featured" aria-label="Ifashola — Living Bridge, English">
+        <div class="bridge-portrait">
+          <div class="bridge-portrait-inner portrait-ifashola">
+            <div class="logo-mark lm-xl portrait-mark" aria-hidden="true">
+              <div class="logo-outer"></div>
+              <div class="logo-inner"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bridge-body">
+          <h3 class="bridge-name">Ifashola Ayuso</h3>
+          <p class="bridge-origin">From Belize · Now in Porto-Novo</p>
+
+          <div class="bridge-languages" aria-label="Languages spoken">
+            <span class="lang-tag">English</span>
+          </div>
+
+          <div class="bridge-rule" aria-hidden="true"></div>
+
+          <p class="bridge-text">
+            For fifteen years, Ifashola traveled between the United States and the Gulf of Guinea, searching for a truth that neither world could fully give her. She knew the ache of the diaspora — the feeling of being at home nowhere and everywhere, of carrying a memory she could not name.
+            <br><br>
+            In Porto-Novo, she found what she was looking for. She received her Fâ, was initiated into Vodoun, and finally recognized the face of her Orí. Today, she no longer chases miracles. She walks the path of remembrance — and accompanies those who seek not quick answers, but a true direction for their lives.
+            <br><br>
+            If you carry the same questions she once carried, Ifashola offers a free 30-minute conversation. No pressure, no sales — just a human exchange, a mirror, a door.
+          </p>
+
+          <div class="bridge-footer">
+            <div class="bridge-cta-note">
+              <strong>Free · 30 minutes</strong>
+              Available in English
+            </div>
+            <a href="index.html#contact?bridge=ifashola" class="btn-primary" aria-label="Book a call with Ifashola Ayuso">
+              Book a call
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ─── AMARA CARVALHO — Placeholder (Portuguese) ──────── -->
+      <article class="bridge-card placeholder" aria-label="Amara Carvalho — Living Bridge, Portuguese (opening soon)">
+        <div class="bridge-portrait">
+          <div class="bridge-portrait-inner portrait-amara">
+            <div class="logo-mark lm-xl portrait-mark" aria-hidden="true">
+              <div class="logo-outer"></div>
+              <div class="logo-inner"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bridge-body">
+          <h3 class="bridge-name">Amara Carvalho</h3>
+          <p class="bridge-origin">De Salvador, Bahia · Agora em Porto-Novo</p>
+
+          <div class="bridge-languages" aria-label="Languages spoken">
+            <span class="lang-tag">Português</span>
+            <span class="lang-tag">English</span>
+          </div>
+
+          <div class="bridge-rule" aria-hidden="true"></div>
+
+          <p class="bridge-text" lang="pt">
+            Amara nasceu dentro de um terreiro em Salvador — o candomblé corria pela sua infância como uma segunda língua. Mas quando se mudou para São Paulo, depois para a Europa, o fio foi se afunilando. Durante anos, ela viveu entre mundos, carregando uma tradição que sentia não ter mais o direito de habitar plenamente.
+            <br><br>
+            A pergunta que a trouxe a Porto-Novo era simples: de onde vêm os orixás? Ela chegou por um mês. Ficou. Recebeu seu Fâ. Foi iniciada no Vodoun. E compreendeu, enfim, que o que ela havia carregado em Salvador nunca foi uma cópia diminuída de algo — era a mesma raiz, em solo diferente.
+            <br><br>
+            Amara fala para brasileiros e afrodescendentes lusófonos que sentem o chamado da tradição mas perderam o fio — ou que nunca souberam que havia um fio para encontrar.
+          </p>
+
+          <div class="bridge-footer">
+            <div class="bridge-cta-note">
+              <strong>Em breve · 30 minutos · Gratuito</strong>
+              Deixe seu contato para ser avisado
+            </div>
+            <a href="index.html#contact?bridge=amara" class="btn-primary" aria-label="Agendar uma conversa com Amara Carvalho">
+              Entre em contato
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ─── MARIÉTOU DIOUF — Placeholder (French) ──────────── -->
+      <article class="bridge-card placeholder" aria-label="Mariétou Diouf — Living Bridge, French (opening soon)">
+        <div class="bridge-portrait">
+          <div class="bridge-portrait-inner portrait-mariétou">
+            <div class="logo-mark lm-xl portrait-mark" aria-hidden="true">
+              <div class="logo-outer"></div>
+              <div class="logo-inner"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bridge-body">
+          <h3 class="bridge-name">Mariétou Diouf</h3>
+          <p class="bridge-origin">De Paris · Maintenant à Porto-Novo</p>
+
+          <div class="bridge-languages" aria-label="Languages spoken">
+            <span class="lang-tag">Français</span>
+            <span class="lang-tag">English</span>
+            <span class="lang-tag">Wolof</span>
+          </div>
+
+          <div class="bridge-rule" aria-hidden="true"></div>
+
+          <p class="bridge-text" lang="fr">
+            Mariétou grandit entre Dakar et Paris — fille d'un père sénégalais et d'une mère guadeloupéenne, elle connut très tôt la géographie intime de l'entre-deux. À Paris, elle fit des études de philosophie. À Dakar, elle entendait les tambours. Pendant des années, elle essaya de tenir les deux ensemble dans sa tête. La tête n'y suffit pas.
+            <br><br>
+            C'est par la recherche — sur les religions africaines en diaspora — qu'elle trouva le chemin vers Porto-Novo. Ce qui devait être un terrain de thèse devint un retour. Elle reçut son Fâ. Elle fut initiée au Vodoun. Elle déposa ses notes et apprit à écouter.
+            <br><br>
+            Mariétou s'adresse aux francophones de la diaspora africaine et caribéenne — à ceux qui portent la question de leurs origines sans savoir encore par où commencer à la dérouler.
+          </p>
+
+          <div class="bridge-footer">
+            <div class="bridge-cta-note">
+              <strong>Bientôt disponible · 30 min · Gratuit</strong>
+              Laissez vos coordonnées pour être prévenu·e
+            </div>
+            <a href="index.html#contact?bridge=marietou" class="btn-primary" aria-label="Réserver une conversation avec Mariétou Diouf">
+              Écrivez-nous
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div><!-- /lb-grid -->
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     HOW IT WORKS
+     ══════════════════════════════════════════════════════════════ -->
+<section id="lb-how" aria-labelledby="lb-how-heading">
+  <div class="container-wide">
+    <span class="section-label reveal" style="display:block; text-align:center;">How it works</span>
+    <h2 class="section-titre reveal" id="lb-how-heading" style="text-align:center; margin-bottom:0;">
+      Four steps.<br>No agenda.
+    </h2>
+
+    <div class="lb-how-grid">
+      <div class="lb-step reveal-stagger">
+        <div class="lb-step-num" aria-hidden="true">01</div>
+        <div class="lb-step-title">You reach out</div>
+        <p class="lb-step-text">Use the contact form to request a conversation. Tell us your language and which Bridge you'd like to speak with. No need to explain yourself — the request itself is enough.</p>
+      </div>
+
+      <div class="lb-step reveal-stagger">
+        <div class="lb-step-num" aria-hidden="true">02</div>
+        <div class="lb-step-title">We connect you</div>
+        <p class="lb-step-text">The Bridge receives your request and confirms a time within a few days. The conversation happens by video or phone, wherever you are in the world.</p>
+      </div>
+
+      <div class="lb-step reveal-stagger">
+        <div class="lb-step-num" aria-hidden="true">03</div>
+        <div class="lb-step-title">Thirty minutes</div>
+        <p class="lb-step-text">The conversation is yours. There is no curriculum, no sales pitch, no assessment. The Bridge listens. They may share their own experience where it's relevant. You speak freely.</p>
+      </div>
+
+      <div class="lb-step reveal-stagger">
+        <div class="lb-step-num" aria-hidden="true">04</div>
+        <div class="lb-step-title">You decide what's next</div>
+        <p class="lb-step-text">Nothing is proposed, nothing is required. If the conversation opens a door you want to walk through, Ayo Traditions exists. But the conversation has no condition, no continuation, no obligation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     ETHICS
+     ══════════════════════════════════════════════════════════════ -->
+<section id="lb-ethics" aria-labelledby="lb-ethics-heading">
+  <div class="container">
+    <div class="lb-ethics-inner">
+      <span class="lb-ethics-label reveal">Our commitments</span>
+      <h2 class="lb-ethics-title reveal" id="lb-ethics-heading">
+        A sacred space,<br>not a sales channel.
+      </h2>
+
+      <ul class="lb-ethics-items">
+        <li class="reveal"><strong>Total confidentiality.</strong> What you share in a Living Bridge conversation stays there. It is not stored, not analysed, not used for marketing.</li>
+        <li class="reveal"><strong>No recording without consent.</strong> If the conversation is recorded for training purposes, you will be asked — clearly, before it begins. You may refuse. The conversation will be exactly the same.</li>
+        <li class="reveal"><strong>No referral pressure.</strong> The Bridge will not mention Ayo Traditions programmes unless you ask. Their role is not to convert — it is to listen.</li>
+        <li class="reveal"><strong>Clear limits.</strong> If what you share requires professional support — psychological, medical, legal — the Bridge will say so, and will offer resources. They hold space, not expertise they do not have.</li>
+        <li class="reveal"><strong>The Bridge is also in process.</strong> They are not finished. They are not perfect. They are on the path — which is exactly why they can accompany others on it.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     BECOME A BRIDGE — soft call
+     ══════════════════════════════════════════════════════════════ -->
+<section id="lb-become" aria-labelledby="lb-become-heading">
+  <div class="container">
+    <div class="lb-become-inner">
+      <div class="ornament reveal" aria-hidden="true"><div class="ornament-diamond"></div></div>
+      <span class="section-label reveal" style="display:block; text-align:center;">For those who have crossed</span>
+      <h2 class="section-titre reveal" id="lb-become-heading" style="text-align:center; font-size: clamp(1.6rem, 3.5vw, 2.4rem);">
+        Are you a Living Bridge?
+      </h2>
+      <p class="lb-become-text reveal">
+        The Living Bridge programme is not open to applications in the ordinary sense. It is a recognition — offered by Ayo Traditions to afro-descendants who have completed a significant portion of their personal return path, received initiation within a West African tradition, and demonstrate the character of those described in the Ayo Coach Charter: a witness, not a saviour. A gardener, not a healer.
+        <br><br>
+        If you believe you may carry this, and if you speak a language in which the diaspora has not yet been served — we are listening.
+      </p>
+      <div class="reveal" style="text-align:center;">
+        <a href="index.html#contact?subject=living-bridge-enquiry" class="btn-ghost">
+          Write to us
+        </a>
+      </div>
+      <div class="ornament reveal" aria-hidden="true"><div class="ornament-diamond"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     FOOTER (simplifié)
+     ══════════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="container-wide">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="logo-mark lm-md" style="color: var(--or); margin-bottom: 1rem;" aria-hidden="true">
+          <div class="logo-outer"></div>
+          <div class="logo-inner"></div>
+        </div>
+        <span class="footer-brand-name">AYO TRADITIONS</span>
+        <p class="footer-brand-texte">We carry the memory of Vodoun as living knowledge. Our mission is to make Benin a matrix of reconciliation for the world.</p>
+      </div>
+      <div class="footer-col">
+        <h4>The house</h4>
+        <ul>
+          <li><a href="index.html#doctrine">The doctrine</a></li>
+          <li><a href="guardians.html">The guardians</a></li>
+          <li><a href="index.html#reciprocite">Reciprocity</a></li>
+          <li><a href="index.html#porto-novo">Porto-Novo</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>The paths</h4>
+        <ul>
+          <li><a href="index.html#card-ibu">Ibú — The threshold</a></li>
+          <li><a href="index.html#card-orule">Òrùlé — The hearth</a></li>
+          <li><a href="index.html#card-ona">Ayo Ònà</a></li>
+          <li><a href="living-bridges.html">Living Bridges</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="index.html#contact">Write</a></li>
+          <li><a href="index.html#newsletter">Monthly letter</a></li>
+          <li class="address-line">Adjinān Vodoun Honto</li>
+          <li class="address-line">Porto-Novo, Benin</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span class="footer-copy">© Ayo Traditions — Porto-Novo, Benin</span>
+      <span class="footer-ase">Ase o · Axé · Ashe</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════════════════════════════
+     JAVASCRIPT (avec pré-remplissage du formulaire)
+     ══════════════════════════════════════════════════════════════ -->
+<script>
+/* ── NAVBAR scroll ─────────────────────────────────────────────── */
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 50);
+}, { passive: true });
+
+/* ── MOBILE MENU ───────────────────────────────────────────────── */
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks   = document.getElementById('nav-links');
+const backdrop   = document.getElementById('menu-backdrop');
+
+function closeMenu() {
+  navbar.classList.remove('menu-open');
+  navLinks.classList.remove('active');
+  menuToggle.setAttribute('aria-expanded', 'false');
+  const s = menuToggle.querySelectorAll('span');
+  s[0].style.transform = ''; s[1].style.opacity = ''; s[2].style.transform = '';
+}
+function openMenu() {
+  navbar.classList.add('menu-open');
+  navLinks.classList.add('active');
+  menuToggle.setAttribute('aria-expanded', 'true');
+  const s = menuToggle.querySelectorAll('span');
+  s[0].style.transform = 'translateY(8px) rotate(45deg)';
+  s[1].style.opacity   = '0';
+  s[2].style.transform = 'translateY(-8px) rotate(-45deg)';
+}
+menuToggle.addEventListener('click', (e) => {
+  e.stopPropagation();
+  navLinks.classList.contains('active') ? closeMenu() : openMenu();
+});
+navLinks.querySelectorAll('a').forEach(l => l.addEventListener('click', closeMenu));
+backdrop.addEventListener('click', closeMenu);
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && navLinks.classList.contains('active')) closeMenu();
+});
+
+/* ── PRÉ-REMPLISSAGE DU FORMULAIRE (si paramètre bridge) ──────── */
+function prefillContactForm() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const bridge = urlParams.get('bridge');
+  if (bridge && window.location.hash === '#contact') {
+    const checkExist = setInterval(() => {
+      const messageField = document.querySelector('#contact textarea, .contact-form textarea');
+      if (messageField) {
+        clearInterval(checkExist);
+        const messages = {
+          'ifashola': 'I would like to book a call with Ifashola Ayuso.',
+          'amara': 'I would like to be notified when Amara Carvalho becomes available.',
+          'marietou': 'Je souhaite être informé·e quand Mariétou Diouf sera disponible.'
+        };
+        if (messages[bridge]) {
+          messageField.value = messages[bridge];
+        }
+      }
+    }, 300);
+  }
+}
+window.addEventListener('hashchange', prefillContactForm);
+window.addEventListener('load', prefillContactForm);
+
+/* ── SCROLL REVEAL ─────────────────────────────────────────────── */
+const REVEAL_SEL = '.reveal, .bridge-card, .lb-step, .reveal-stagger';
+
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObs.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll(REVEAL_SEL).forEach(el => revealObs.observe(el));
+
+/* Safety fallback */
+setTimeout(() => {
+  document.querySelectorAll(REVEAL_SEL).forEach(el => el.classList.add('visible'));
+}, 900);
+
+/* ── STAGGERED cards and steps ─────────────────────────────────── */
+document.querySelectorAll('.lb-grid .bridge-card').forEach((card, i) => {
+  card.style.transitionDelay = `${i * 0.14}s`;
+});
+document.querySelectorAll('.lb-how-grid .lb-step').forEach((step, i) => {
+  step.style.transitionDelay = `${i * 0.1}s`;
+});
+</script>
+
+</body>
+</html>
